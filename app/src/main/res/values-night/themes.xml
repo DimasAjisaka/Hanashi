@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Hanashi" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/material_blue_50p</item>
+        <item name="colorPrimaryVariant">@color/material_blue</item>
+        <item name="colorOnPrimary">@color/light_dark</item>
+        <item name="bg">@color/dark</item>
+        <item name="boldText">@color/white_bold_text</item>
+        <item name="regularText">@color/black_regular_text</item>
+        <item name="typing">@color/white_bold_text</item>
+        <item name="appbar">@color/dark</item>
+        <item name="card">@color/light_dark</item>
+        <item name="field">@color/dark_10p</item>
+        <item name="iconTint">@color/white</item>
+        <item name="inactivetab">@color/silver_polish</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/material_blue</item>
+        <item name="colorSecondaryVariant">@color/material_blue</item>
+        <item name="colorOnSecondary">@color/material_blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+    </style>
+</resources>

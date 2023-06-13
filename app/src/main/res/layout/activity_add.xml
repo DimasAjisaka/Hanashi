@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.AddActivity"
+    android:background="?attr/bg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/ivStory"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/baseline_image_24"
+                android:contentDescription="@string/img_story" />
+
+            <Button
+                android:id="@+id/btnCam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivStory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnGall"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/camera"
+                android:backgroundTint="@color/material_blue"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnGall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivStory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnCam"
+                android:layout_marginTop="20dp"
+                android:text="@string/gallery"
+                android:backgroundTint="@color/material_blue"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/btnCam"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:textStyle="normal"
+                android:textColor="?attr/boldText"
+                android:textSize="20sp"
+                android:text="@string/description"/>
+
+            <EditText
+                android:id="@+id/etDesc"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_constraintTop_toBottomOf="@id/tvDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="?attr/card"
+                android:textColor="?attr/typing"
+                android:inputType="textNoSuggestions|textMultiLine"
+                android:hint="@string/max_150_word"
+                android:gravity="top|start"
+                android:padding="6dp"
+                tools:ignore="Autofill,TextFields"/>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/etDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="20dp"
+                android:text="@string/add"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/material_blue"
+                android:textColor="@color/white"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="?android:progressBarStyle"
+                android:indeterminate="true"
+                app:indicatorSize="60dp"
+                app:trackThickness="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
